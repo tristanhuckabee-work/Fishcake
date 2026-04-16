@@ -1,4 +1,4 @@
-# Phase 0: Backend Set Up
+<!-- # Phase 0: Backend Set Up
 
 First, you need to setup the backend of your application. This includes
 installing dependencies, setting up Sequelize, initializing your Express
@@ -297,15 +297,11 @@ sequelize.showAllSchemas({ logging: false }).then(async (data) => {
 ```
 
 Finally, migrate the database using `sequelize-cli` to make sure you set
-everything up correctly.
+everything up correctly. -->
 
 ```bash
 npx dotenv sequelize db:migrate
 ```
-
-Remember, any `sequelize db:` commands need to be prefixed with `dotenv` to load
-the database configuration environment variables from the `.env` file.
-
 ## Express Setup
 
 After you setup Sequelize, it's time to start working on getting your Express
