@@ -3,7 +3,7 @@ function RestoreCSRF(req, res) {
 
   res.cookie("XSRF-TOKEN", csrfToken);
   res.status(200).json({
-    'XSRF-Token': csrfToken
+    "XSRF-Token": csrfToken
   });
 }
 
