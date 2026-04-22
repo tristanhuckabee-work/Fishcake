@@ -1,15 +1,24 @@
-function postUser (req, res) {}
+async function SignUp(req, res) {
+  const { email, password, username } = req.body;
+  const hashedPassword = bcrypt.hashSync(password);
+  const user = await User.create({ email, username, hashedPassword });
+  const safeUser = { id: user.id, email: user.email, username: user.username };
 
-function getUsers (req, res) {}
+  await setTokenCookie(res, safeUser);
 
-function getUserById (req, res) {}
+  return res.json({ user: safeUser });
+}
 
-function updateUser (req, res) {}
+function getUsers(req, res) { }
 
-function deleteUser (req, res) {}
+function getUserById(req, res) { }
+
+function updateUser(req, res) { }
+
+function deleteUser(req, res) { }
 
 module.exports = {
-  postUser,
+  SignUp,
   getUsers,
   getUserById,
   updateUser,
