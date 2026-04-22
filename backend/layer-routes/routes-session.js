@@ -7,6 +7,7 @@ const controller = require("../layer-controllers").Session_Controller;
 // ----------------------------------------------------------------------------
 
 router.post("/", controller.LogIn);
+router.delete("/", controller.LogOut);
 
 // ----------------------------------------------------------------------------
 module.exports = router;

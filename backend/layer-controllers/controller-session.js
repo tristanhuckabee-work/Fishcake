@@ -27,7 +27,13 @@ async function LogIn(req, res, next) {
   return res.json({ user: safeUser });
 };
 
+function LogOut(_req, res) {
+  res.clearCookie("token");
+  return res.json({ message: "success" });
+};
+
 // ----------------------------------------------------------------------------
 module.exports = {
-  LogIn
+  LogIn,
+  LogOut
 };
