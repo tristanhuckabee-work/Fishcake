@@ -8,7 +8,7 @@ router.get("/", controller.getTickets)
 router.get("/:id", controller.getTicketById)
 router.get("/user/:id", controller.getTicketsByUser)
 
-router.update("/", controller.updateTicket)
+router.patch("/", controller.updateTicket)
 
 router.delete("/", controller.deleteTicket)
 

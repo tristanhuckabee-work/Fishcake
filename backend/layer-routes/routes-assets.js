@@ -6,9 +6,9 @@ router.post("/", controller.postAsset)
 
 router.get("/", controller.getAssets)
 router.get("/:id", controller.getAssetById)
-router.get("/user/:id", controller.getAssetsByUser)
+router.get("/user/:id", controller.getAssetByUser)
 
-router.update("/", controller.updateAsset)
+router.patch("/", controller.updateAsset)
 
 router.delete("/", controller.deleteAsset)
 

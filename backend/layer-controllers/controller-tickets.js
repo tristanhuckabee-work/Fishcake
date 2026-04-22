@@ -4,7 +4,7 @@ function getTickets (req, res) {}
 
 function getTicketById (req, res) {}
 
-function getTicketByUser (req, res) {}
+function getTicketsByUser (req, res) {}
 
 function updateTicket (req, res) {}
 
@@ -14,7 +14,7 @@ module.exports = {
   postTicket,
   getTickets,
   getTicketById,
-  getTicketByUser,
+  getTicketsByUser,
   updateTicket,
   deleteTicket
 }
