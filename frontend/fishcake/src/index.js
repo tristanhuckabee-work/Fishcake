@@ -5,16 +5,19 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import configureStore from "./store";
 import { restoreCSRF, csrfFetch } from "./store/csrf";
+import * as sessionActions from "./store/session";
 import "./index.css";
 // ----------------------------------------------------------------------------
 
 const store = configureStore();
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 if (process.env.NODE_ENV !== "production") {
   restoreCSRF();
 
   window.csrfFetch = csrfFetch;
   window.store = store;
+  window.sessionActions = sessionActions;
 }
 
 function Root() {
@@ -27,9 +30,8 @@ function Root() {
   )
 }
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <Root />
-  </React.StrictMode>,
-  document.getElementById("root")
-)
+  </React.StrictMode>
+);
