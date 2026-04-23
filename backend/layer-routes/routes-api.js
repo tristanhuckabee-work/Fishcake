@@ -1,13 +1,12 @@
-const router = require("express").Router();
+const router     = require("express").Router();
+const auth       = require("../util/auth.js");
 const controller = require("../layer-controllers").API_Controller
-const { restoreUser, requireAuth} = require("../util/auth.js");
 // ----------------------------------------------------------------------------
 
-// router.get("/restore-user", controller.RestoreUser);
 router.get("/restore-csrf", controller.RestoreCSRF);
 router.get("/set-token", controller.SetTokenCookie);
 
-router.use(restoreUser);
+router.use(auth.restoreUser);
 
 // ----------------------------------------------------------------------------
 module.exports = router;
