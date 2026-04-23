@@ -1,0 +1,40 @@
+.auth-form {
+  align-items: flex-start;
+  background-color: var(--a);
+  color: var(--b);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: space-between;
+  padding: 20px;
+}
+.auth-form h2, h3 { color: var(--b) }
+.auth-form form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.auth-form input {
+  background-color: var(--b);
+  border-radius: 25px;
+  border: 1px solid var(--a);
+  color: var(--c);
+  font-size: 1.25em;
+  height: 50px;
+  /* outline: 2px dotted var(--b); */
+  padding: 20px;
+  width: 400px;
+}
+.auth-form button {
+  background-color: var(--d);
+  border-radius: 25px;
+  border: 0px solid;
+  color: var(--c);
+  font-size: 1.25em;
+  width: 400px;
+  height: 50px;
+
+}

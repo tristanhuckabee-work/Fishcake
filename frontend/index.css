@@ -1,3 +1,10 @@
+:root {
+  --a: #614051;
+  --b: #3a2a33;
+  --c: #a89090;
+  --d: #2b3a42;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
