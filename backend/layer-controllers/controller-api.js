@@ -11,7 +11,7 @@ function RestoreCSRF(req, res) {
   });
 };
 
-function RestoreUser(req, res) { return res.json(req.user) };
+// function RestoreUser(req, res) { return res.json(req.user) };
 
 async function SetTokenCookie(_req, res) {
   const user = await User.findOne({ where: { username: 'Demo-lition' } });
@@ -23,6 +23,6 @@ async function SetTokenCookie(_req, res) {
 // ----------------------------------------------------------------------------
 module.exports = {
   RestoreCSRF,
-  RestoreUser,
+  // RestoreUser,
   SetTokenCookie
 };

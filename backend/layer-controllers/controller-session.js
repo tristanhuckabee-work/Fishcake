@@ -9,7 +9,7 @@ async function LogIn(req, res, next) {
   const { credential, password } = req.body;
 
   const user = await User.unscoped().findOne({
-    where: { [Op.or]: { username: credential, email: credential } }
+    where: { [Op.or]: { email: credential } }
   });
 
   if (!user || !bcrypt.compareSync(password, user.hashedPassword.toString())) {
