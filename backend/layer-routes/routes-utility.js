@@ -18,18 +18,18 @@ const validateSignup = [
     .exists({ checkFalsy: true })
     .isEmail()
     .withMessage('Please provide a valid email.'),
-  check('username')
+  check('firstName')
     .exists({ checkFalsy: true })
-    .isLength({ min: 4 })
-    .withMessage('Please provide a username with at least 4 characters.'),
-  check('username')
-    .not()
-    .isEmail()
-    .withMessage('Username cannot be an email.'),
+    .isLength({ min: 3 })
+    .withMessage('minimum length of 3 characters.'),
+  check('lastName')
+    .exists({ checkFalsy: true })
+    .isLength({ min: 3 })
+    .withMessage('minimum length of 3 characters.'),
   check('password')
     .exists({ checkFalsy: true })
     .isLength({ min: 6 })
-    .withMessage('Password must be 6 characters or more.'),
+    .withMessage('minimum length of 6 characters'),
   handleValidationErrors
 ];
 

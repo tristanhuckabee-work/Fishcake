@@ -1,20 +1,25 @@
 .auth-form {
   align-items: flex-start;
   background-color: var(--a);
+  border-radius: 10px;
   color: var(--b);
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
   justify-content: space-between;
   padding: 20px;
+  width: fit-content;
 }
-.auth-form h2, h3 { color: var(--b) }
+.auth-form h2, h3 {
+  color: var(--b);
+  max-width: 400px;
+}
 .auth-form form {
-  display: flex;
   align-items: flex-start;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 10px;
+  justify-content: space-between;
 }
 
 .auth-form input {
@@ -24,7 +29,6 @@
   color: var(--c);
   font-size: 1.25em;
   height: 50px;
-  /* outline: 2px dotted var(--b); */
   padding: 20px;
   width: 400px;
 }
@@ -34,7 +38,15 @@
   border: 0px solid;
   color: var(--c);
   font-size: 1.25em;
-  width: 400px;
   height: 50px;
-
+  width: 400px;
+}
+.auth-form button:hover {
+  background-color: var(--e);
+  cursor: pointer;
+}
+.auth-form span.form-error {
+  color:red;
+  font-weight: 100;
+  font-size: 0.9em;
 }
